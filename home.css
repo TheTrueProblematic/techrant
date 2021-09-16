@@ -1,0 +1,77 @@
+
+.welcome{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 8vh;
+    font-weight: 600;
+}
+.grid-container{
+    margin-top: 5vh;
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-columns: auto;
+    text-align: center;
+}
+
+.link-container{
+    margin-top: 4%;
+    text-align: center;
+}
+
+.link-item{
+    display: inline-block;
+    text-align: left;
+    margin: 0 4%;
+}
+
+.social-link{
+    color: #1D3557;
+    transition: 0.3s;
+}
+
+.social-link:hover{
+    color: #E63946;
+}
+
+.tagline{
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 3%;
+}
+
+#a:hover ~ #current-page{
+    background-color: #1D3557;
+}
+
+#name{
+    border-bottom: 2px #E63946;
+}
+
+hr{
+    width: 0px;
+    display:block;
+    border-top: 3px solid #E63946;
+    transition: all 1s ease;
+}
+
+.typewriter{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #E63946; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation:
+            typing 2.5s steps(40, end),
+            blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #E63946; }
+}

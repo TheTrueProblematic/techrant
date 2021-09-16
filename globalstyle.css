@@ -1,0 +1,242 @@
+body {
+    background-color: #f1faee;
+    background-image: url("tempBackgroundBlur.png");
+    background-size: 100% 200%;
+    /*background-color: #F1FAEE;*/
+    font-family: 'Montserrat', sans-serif;
+    font-display: swap;
+    color: #1D3557;
+    overflow-x: hidden;
+}
+
+.preloader {
+    align-items: center;
+    background-color: #F1FAEE;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity .5s linear;
+    width: 100%;
+    z-index: 9999;
+}
+
+.center{
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#menu {
+    position: absolute;
+    right: 5vw;
+    top: 30%;
+    list-style-type: none;
+    display: table;
+    table-layout: auto;
+    transition: 1s;
+}
+
+.other-page {
+    width: 80px;
+    display: block;
+    color: #F1FAEE;
+    padding: 20px 16px;
+    text-decoration: none;
+    background-color: #1D3557;
+    font-weight: 300;
+    transition: .3s;
+}
+
+#current-page{
+    width: 80px;
+    display: block;
+    padding: 20px 16px;
+    text-decoration: none;
+    background-color: #1D3557;
+    transition: .3s;
+    color: #E63946;
+    font-weight: 600;
+}
+
+li a:hover{
+    font-weight: 600;
+    /*background-color: #457B9D;*/
+}
+
+#logo{
+    position: fixed;
+    top: 1vh;
+    right: 2vh;
+    width:45px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1D3557;
+    border-radius: 5px;
+}
+
+#menuToggle
+{
+    display: block;
+    position: relative;
+    top: 2vh;
+    left: 2vh;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a
+{
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+#menuToggle a:hover
+{
+    color: #E63946;
+}
+
+
+#menuToggle input
+{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #1D3557;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+    transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #E63946;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+    position: absolute;
+    width: 150px;
+    border-radius: 3em;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    left:0%;
+
+    background: #1D3557;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+    padding: 0px 0;
+    font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+    transform: none;
+}
+
+#latestRant{
+    position: absolute;
+    left: 27.5vw;
+    right: 27.5vw;
+    top: 27.5vh;
+    bottom: 5vh;
+    width: 45vw;
+    height: 67.5vh;
+}

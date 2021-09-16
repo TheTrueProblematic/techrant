@@ -1,7 +1,7 @@
 body {
     background-color: #f1faee;
     background-image: url("tempBackgroundBlur.png");
-    background-size: 100% 200%;
+    background-size: 100vw 200vh;
     /*background-color: #F1FAEE;*/
     font-family: 'Montserrat', sans-serif;
     font-display: swap;
@@ -239,4 +239,14 @@ li a:hover{
     bottom: 5vh;
     width: 45vw;
     height: 67.5vh;
+}
+
+#pageRant{
+    position: absolute;
+    left: 27.5vw;
+    right: 27.5vw;
+    top: 15vh;
+    bottom: 5vh;
+    width: 45vw;
+    height: 80vh;
 }
